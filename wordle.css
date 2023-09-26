@@ -1,10 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     font-family: 'Roboto', sans-serif;
     text-align: center;
+    position: relative;
+    background-color: white;
 }
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img_box{
+    width: 30px;
+    height: 30px;
+}
+button{
+    border:none;
+    background-color: inherit;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+#openBtn:hover{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+}
+
+.modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right: 0;
+    background-color: rgba(235, 235, 235, 0.716);
+}
+
+.openModal{
+    display: block;
+}
+.modal_box{
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    top: 50;
+    right: 0;
+    padding: 20px;
+}
+.modal_tile_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+#closeBtn{
+    width: 40px;
+    height: 40px;
+}
+#closeBtn:hover{
+    background-color: #e2e2e2d5;
+    border-radius: 50%;
+}
+.modal_text{
+    text-align: start;
+    margin-bottom: 30px;
+}
+.modal_text_span{
+    font-weight: bold;
+}
+.modal_text2{
+    text-align: start;
+    font-size: 16px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
 
 hr{
     width: 500px;
@@ -99,6 +189,8 @@ hr{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 2px solid gray;
+    padding-bottom: 20px;
 }
 
 #Enter{
@@ -174,5 +266,21 @@ hr{
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    
+}
+
+@media screen and (max-width:550px) {
+    .modal_box{
+        width: 300px;
+        height: 400px;
+        background-color: white;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        top: 50;
+        right: 0;
+        padding: 20px;
     }
 }

@@ -2,7 +2,32 @@ var height = 6; // number of guesses
 var width = 5; // lenght of the word
 
 var row = 0; // current guess (attemp #)
-var col = 0; // current letter for that attemp
+var col = 0; // current letter for that attem
+
+
+var modal = document.getElementById('modal')
+var openBtn = document.getElementById('openBtn')
+var closeBtn = document.getElementById('closeBtn')
+
+
+function openModal() {
+  modal.classList.add('openModal')
+
+  console.log('123');
+}
+function closeModal() {
+  modal.classList.remove('openModal')
+}
+
+
+window.addEventListener('click' , (e) => {
+  if(e.target == modal) {
+    modal.classList.remove('openModal')
+  }
+})
+
+
+
 
 var gameOver = false;
 
